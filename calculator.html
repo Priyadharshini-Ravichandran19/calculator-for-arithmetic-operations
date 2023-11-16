@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+#calculator
+{
+background-color: powderblue;
+width: 250px;
+border: 5px solid rgb(44, 128, 161);
+border-radius: 5px;
+padding: 10px;
+}
+input
+{
+width: 90%;
+margin-bottom: 15px;
+padding: 8px;
+font-size: 23px;
+}
+button
+{
+width: 48px;
+height: 48px;
+margin: 2px;
+font-size: 16px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+<div id="calculator">
+<input type="number" id="num1">
+<input type="number" id="num2"> <br>
+<button onclick="addOperation()">+</button>
+<button onclick="subtractOperation()">-</button>
+<button onclick="multiplyOperation()">*</button>
+<button onclick="divideOperation()">/</button>
+<br>
+<input type="text" id="result" readonly>
+</div>
+<script>
+    const num1Input = document.getElementById('num1');
+    const num2Input = document.getElementById('num2');
+    const addOperation = () =>
+    {
+    const resultInput = parseFloat(num1Input.value) +
+    parseFloat(num2Input.value);
+    document.getElementById('result').value = resultInput;
+    };
+    const subtractOperation = () =>
+    {
+    const resultInput = parseFloat(num1Input.value) - parseFloat(num2Input.value);
+    document.getElementById('result').value = resultInput;
+    };
+    const multiplyOperation = () =>
+    {
+    const resultInput = parseFloat(num1Input.value) *
+    parseFloat(num2Input.value);
+    document.getElementById('result').value = resultInput;
+    };
+    const divideOperation = () =>
+    {
+    const resultInput = parseFloat(num1Input.value) /
+    parseFloat(num2Input.value);
+    document.getElementById('result').value = resultInput;
+    };
+    </script>
+    </body>
+    </html>
